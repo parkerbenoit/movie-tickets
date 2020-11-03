@@ -1,14 +1,42 @@
+// Business Logic for Tickets
 
+function TicketOffice() {
+  this.movies = [];
+  this.currentId = 0;
+}
 
+TicketOffice.prototype.addMovie = function(movie) {
+  movie.id = this.assignId();
+  this.movies.push(movie);
+}
+
+TicketOffice.prototype.assignId = function()  {
+  this.currentId +=1;
+  return this.currentId;
+}
+
+TicketOffice.prototype.addShowtime = function ()  {
+  this.movies.push(movie);
+}
 
 
 // Business Logic for Movies ------------
 
-function Movie(movieTitle, time, age) {
+function Movie(movieTitle, showTime) {
   this.movieTitle = movieTitle;
-  this.time = time;
-  this.age = age;
+  this.showTime = showTime;
 }
+
+//function TicketPrice(age)//
+
+
+// User Interface Logic ----------
+let ticketOffice = new TicketOffice();
+
+
+
+
+
 
 
 
